@@ -1,4 +1,4 @@
-package domain;
+package cn.edu.cqu.wheelProject.domain;
 
 public class Customer {
 	 /**

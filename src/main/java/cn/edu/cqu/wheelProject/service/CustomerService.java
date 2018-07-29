@@ -1,10 +1,13 @@
-package service;
-
+package cn.edu.cqu.wheelProject.service;
 import java.util.List;
 import java.util.Map;
 
-import domain.Customer;
-import helper.DatabaseHelper;
+
+import cn.edu.cqu.wheel.framework.helper.DatabaseHelper;
+import cn.edu.cqu.wheelProject.domain.Customer;
+
+
+
 
 
 /**

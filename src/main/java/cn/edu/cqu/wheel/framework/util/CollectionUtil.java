@@ -1,4 +1,4 @@
-package util;
+package cn.edu.cqu.wheel.framework.util;
 
 import java.util.Collection;
 import java.util.Map;

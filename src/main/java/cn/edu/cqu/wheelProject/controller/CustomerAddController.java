@@ -1,4 +1,4 @@
-package controller;
+package cn.edu.cqu.wheelProject.controller;
 
 import java.io.IOException;
 
@@ -8,9 +8,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import domain.Customer;
-import service.CustomerService;
-import util.MapTrunPojoUtil;
+
+import cn.edu.cqu.wheel.framework.util.MapTrunPojoUtil;
+import cn.edu.cqu.wheelProject.domain.Customer;
+import cn.edu.cqu.wheelProject.service.CustomerService;
+
+
+
+
 
 /**
  * 创建客户

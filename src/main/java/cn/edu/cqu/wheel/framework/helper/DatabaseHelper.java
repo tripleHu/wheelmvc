@@ -1,4 +1,4 @@
-package helper;
+package cn.edu.cqu.wheel.framework.helper;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
@@ -17,8 +17,10 @@ import org.apache.commons.dbutils.handlers.MapListHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import util.CollectionUtil;
-import util.PropsUtil;
+import cn.edu.cqu.wheel.framework.util.CollectionUtil;
+import cn.edu.cqu.wheel.framework.util.PropsUtil;
+
+
 
 
 /**
@@ -39,17 +41,11 @@ public final class DatabaseHelper {
 
         QUERY_RUNNER = new QueryRunner();
 
-        Properties conf = PropsUtil.loadProps("config.properties");
-        String driver = conf.getProperty("jdbc.driver");
-        String url = conf.getProperty("jdbc.url");
-        String username = conf.getProperty("jdbc.username");
-        String password = conf.getProperty("jdbc.password");
-
         DATA_SOURCE = new BasicDataSource();
-        DATA_SOURCE.setDriverClassName(driver);
-        DATA_SOURCE.setUrl(url);
-        DATA_SOURCE.setUsername(username);
-        DATA_SOURCE.setPassword(password);
+        DATA_SOURCE.setDriverClassName(ConfigHelper.getJdbcDriver());
+        DATA_SOURCE.setUrl(ConfigHelper.getJdbcUrl());
+        DATA_SOURCE.setUsername(ConfigHelper.getJdbcUsername());
+        DATA_SOURCE.setPassword(ConfigHelper.getJdbcPassword());
     }
 
     /**
