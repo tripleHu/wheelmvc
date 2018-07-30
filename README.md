@@ -15,14 +15,21 @@ wheelmvc顾名思义，就是造了一个轮子，本项目为在学习springmvc
 - 实现了MVC、IOC、ORM
 
 本项目实现类似springmvc功能，framework包里为框架代码，wheelProject包里为基于框架实现的测试应用
+
 框架配置文件为wheel.properties，默认配置信息储存在ConfigConstant接口中
 
 ClassUtil自定义类加载器以实现类加载
+
 定义四种注解：@Controller,@Inject,@Service,@Action
+
 BeanHelper实现最简单的Bean容器，所有对象均为单例
+
 IOCHelper实现@Inject的依赖注入
+
 ControllerHelpers实现@Controller类中@Action请求地址与方法匹配
+
 DispatcherServlet实现请求转发到框架
+
 实现View返回jsp页面(类似于ModelAndView)和Data返回JSON数据
 
 
