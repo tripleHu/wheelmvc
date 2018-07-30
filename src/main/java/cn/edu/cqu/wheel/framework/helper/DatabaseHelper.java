@@ -46,6 +46,7 @@ public final class DatabaseHelper {
         DATA_SOURCE.setUrl(ConfigHelper.getJdbcUrl());
         DATA_SOURCE.setUsername(ConfigHelper.getJdbcUsername());
         DATA_SOURCE.setPassword(ConfigHelper.getJdbcPassword());
+
     }
 
     /**

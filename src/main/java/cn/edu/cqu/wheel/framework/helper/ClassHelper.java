@@ -92,4 +92,11 @@ public final class ClassHelper {
         }
         return classSet;
     }
+    public static void main(String[] args){
+    	Set<Class<?>> aClasses = getClassSet();
+    	for (Class<?> obj: aClasses) {
+    		System.out.println(obj.getName());
+    		
+    	}
+    }
 }

@@ -8,7 +8,7 @@
   <name>wheelmvc Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
-<!-- Servlet -->
+		<!-- Servlet -->
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
@@ -72,6 +72,12 @@
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-dbcp2</artifactId>
             <version>2.0.1</version>
+        </dependency>
+        <!-- Jackson -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.5.2</version>
         </dependency>
   </dependencies>
   <build>

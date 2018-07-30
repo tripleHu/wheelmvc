@@ -2,7 +2,7 @@ package cn.edu.cqu.wheelProject.service;
 import java.util.List;
 import java.util.Map;
 
-
+import cn.edu.cqu.wheel.framework.anotation.Service;
 import cn.edu.cqu.wheel.framework.helper.DatabaseHelper;
 import cn.edu.cqu.wheelProject.domain.Customer;
 
@@ -13,6 +13,7 @@ import cn.edu.cqu.wheelProject.domain.Customer;
 /**
  * 提供客户数据服务
  */
+@Service
 public class CustomerService {
 
     /**
