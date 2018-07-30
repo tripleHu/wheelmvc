@@ -14,7 +14,10 @@ import cn.edu.cqu.wheel.framework.util.ReflectionUtil;
  * Bean 助手类
  */
 public final class BeanHelper {
-	 private static final Logger LOGGER = LoggerFactory.getLogger(BeanHelper.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(BeanHelper.class);
+	/**
+	 * 定义Bean映射，存放Bean类与Bean实例的映射关系
+	 */
     private static final Map<Class<?>, Object> BEAN_MAP = new HashMap<Class<?>, Object>();
 
     static {
