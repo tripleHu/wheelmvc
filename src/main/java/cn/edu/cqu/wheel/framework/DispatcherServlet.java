@@ -61,6 +61,7 @@ public class DispatcherServlet extends HttpServlet {
         
         
             String requestMethod = request.getMethod().toLowerCase();
+            
             String requestPath = request.getPathInfo();
             //获取Action处理器
             ActionHandler handler = ControllerHelper.getHandler(requestMethod, requestPath);

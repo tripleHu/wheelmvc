@@ -20,7 +20,7 @@ wheelmvc顾名思义，就是造了一个轮子，本项目为在学习springmvc
 
 ClassUtil自定义类加载器以实现类加载
 
-定义四种注解：@Controller,@Inject,@Service,@Action
+定义多种注解：@Controller,@Inject,@Service,@Action @Aspect
 
 BeanHelper实现最简单的Bean容器，所有对象均为单例
 
@@ -32,4 +32,17 @@ DispatcherServlet实现请求转发到框架
 
 实现View返回jsp页面(类似于ModelAndView)和Data返回JSON数据
 
+---
+
+### 2018-08-06 更新内容
+
+
+
+利用CGLib实现AOP功能，目前只实现了对整个类所有方法的代理并且只能对有注解的类有效，如@Controller,@Service
+
+AopHelper 实现代理功能 
+
+切面类需继承AspectProxy类并添加注解@Aspect(Controller.class)或@Aspect(Service.class)
+
+---
 
