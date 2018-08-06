@@ -1,5 +1,6 @@
 package cn.edu.cqu.wheel.framework;
 
+import cn.edu.cqu.wheel.framework.helper.AopHelper;
 import cn.edu.cqu.wheel.framework.helper.BeanHelper;
 import cn.edu.cqu.wheel.framework.helper.ClassHelper;
 import cn.edu.cqu.wheel.framework.helper.ControllerHelper;
@@ -15,6 +16,7 @@ public final class HelperLoader {
         Class<?>[] classList = {
             ClassHelper.class,
             BeanHelper.class,
+            AopHelper.class,
             IocHelper.class,
             ControllerHelper.class
         };
