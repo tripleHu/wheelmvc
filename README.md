@@ -44,5 +44,20 @@ AopHelper 实现代理功能
 
 切面类需继承AspectProxy类并添加注解@Aspect(Controller.class)或@Aspect(Service.class)
 
+实现五种方法增强
+```
+	public void begin() {
+    }
+    public void before(Class<?> cls, Method method, Object[] params) throws Throwable {
+    }
+
+    public void after(Class<?> cls, Method method, Object[] params, Object result) throws Throwable {
+    }
+
+    public void error(Class<?> cls, Method method, Object[] params, Throwable e) {
+    }
+    public void end() {
+    }
+```
 ---
 
