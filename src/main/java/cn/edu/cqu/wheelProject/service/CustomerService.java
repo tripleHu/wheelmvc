@@ -3,6 +3,7 @@ import java.util.List;
 import java.util.Map;
 
 import cn.edu.cqu.wheel.framework.anotation.Service;
+import cn.edu.cqu.wheel.framework.anotation.Transaction;
 import cn.edu.cqu.wheel.framework.helper.DatabaseHelper;
 import cn.edu.cqu.wheelProject.domain.Customer;
 
@@ -19,14 +20,17 @@ public class CustomerService {
     /**
      * 获取客户列表
      */
+	@Transaction
     public List<Customer> getCustomerList() {
         String sql = "SELECT * FROM customer";
+        
         return DatabaseHelper.queryEntityList(Customer.class, sql);
     }
 
     /**
      * 获取客户
      */
+	@Transaction
     public Customer getCustomer(long id) {
         String sql = "SELECT * FROM customer WHERE id = ?";
         return DatabaseHelper.queryEntity(Customer.class, sql, id);

@@ -11,9 +11,11 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import cn.edu.cqu.wheel.framework.anotation.Aspect;
+import cn.edu.cqu.wheel.framework.anotation.Service;
 import cn.edu.cqu.wheel.framework.proxy.AspectProxy;
 import cn.edu.cqu.wheel.framework.proxy.Proxy;
 import cn.edu.cqu.wheel.framework.proxy.ProxyManager;
+import cn.edu.cqu.wheel.framework.proxy.TransactionProxy;
 
 
 /**
@@ -44,6 +46,7 @@ public final class AopHelper {
     private static Map<Class<?>, Set<Class<?>>> createProxyMap() throws Exception {
         Map<Class<?>, Set<Class<?>>> proxyMap = new HashMap<Class<?>, Set<Class<?>>>();
         addAspectProxy(proxyMap);
+        addTransactionProxy(proxyMap);
         return proxyMap;
     }
     /**
@@ -76,7 +79,15 @@ public final class AopHelper {
         }
         return targetClassSet;
     }
-
+    /**
+     * @ Transaction注解
+     * @param proxyMap
+     */
+    private static void addTransactionProxy(Map<Class<?>, Set<Class<?>>> proxyMap) {
+        Set<Class<?>> serviceClassSet = ClassHelper.getClassSetByAnnotation(Service.class);
+        proxyMap.put(TransactionProxy.class, serviceClassSet);
+    }
+    
     private static Map<Class<?>, List<Proxy>> createTargetMap(Map<Class<?>, Set<Class<?>>> proxyMap) throws Exception {
         Map<Class<?>, List<Proxy>> targetMap = new HashMap<Class<?>, List<Proxy>>();//被代理类和代理（切面）类的对应关系，一个controller可以被多个切面类同时代理
         for (Map.Entry<Class<?>, Set<Class<?>>> proxyEntry : proxyMap.entrySet()) {
